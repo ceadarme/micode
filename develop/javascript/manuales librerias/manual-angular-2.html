@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <title>Manual de Angular</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="apple-touch-fullscreen" content="no" />
+
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/images/icono_DW.png" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<meta name="author" content="DesarrolloWeb.com">
+
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="/css/estilo2015.css">
+
+
+<script language="javascript" type="text/javascript" src="/js/mootools-core-1.4.5.js"></script><script language="javascript" type="text/javascript" src="/js/votacion.js"></script><script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {lang: 'es'}
+</script><meta property="og:title" content="Manual de Angular" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.desarrolloweb.com/manuales/manual-angular-2.html" />
+<meta property="og:image" content="http://www.desarrolloweb.com/images/logo-desarrolloweb100x60.gif" /><meta property="og:site_name" content="DesarrolloWeb.com" />
+<meta property="fb:admins" content="100001063850916" />
+<script>
+var base_dir = "https://desarrolloweb.com";
+
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+	</script>
+</head>
+
+<body >
+	<div id="container">
+   	<header>
+      <div id="logo">
+                <a href='http://desarrolloweb.com'>
+          <img src="/img/logo.png" alt="Logo de DesarrolloWeb.com">
+        </a>
+      </div>
+      <div id="iconosredes20">
+        <a href="http://www.facebook.com/desarrollowebcom/" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="facebook" id="fb20"></a>
+        <a href="http://www.twitter.com/deswebcom/" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="twitter" id="tw20"></a>
+        <a href="https://plus.google.com/111428356405969326386/posts" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="google plus" id="gp20"></a>
+        <a href="http://www.youtube.com/desarrollowebcom" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="youtube" id="yt20"></a>
+        <a href="http://www.desarrolloweb.com/rss/general_rss.php" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="rss" id="rss20"></a>
+      </div>
+
+      <div id="buscador">
+        <form action="/buscar.php " id="cse-search-box">
+          <div>
+            <input type="hidden" name="cx" value="partner-pub-2899450519669111">
+            <input type="hidden" name="cof" value="FORID:11">
+            <input type="hidden" name="ie" value="ISO-8859-1">
+            <input type="text" name="q" id="textobuscar" placeholder="ej. css"><input type="submit" name="sa" value="Buscar" id="botonbuscar">
+          </div>
+        <input name="siteurl" type="hidden" value="www.desarrolloweb.com/"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value=""></form>
+      </div>
+      <div class="loginbox">
+                <div class="icousuario">
+          <span class="icon-user"></span>
+           <a id="enlacelogin" href="#" onclick="$('.cu250mdWrapper').slideToggle();return false;" >Login</a> | <a href="/comunidad/registro/" >Registro</a>
+          <div class="cu250mdWrapper" id="2flogin">
+            <div class="cu250md">
+              <div class="accesoUsuarios col_1 mb">Acceso usuarios</div>
+              <div class="errorLoginWrapper">
+                 <div class="errorLogin"></div>
+              </div>
+              <form method="post" action="/dologin.php" id="formullogin" onsubmit="return false;">
+                <input type="hidden" value="" name="id_descarga">
+                <input type="hidden" value="/" name="origen">
+                <div class="col_1 mb sufix_1">
+                  <label for="usuario" class="col_2">E-mail:</label>
+                  <input type="text" maxlength="150" size="14" name="usuario" id="usuario" class="col_2" >
+                </div>
+                <div class="col_1 mb sufix_1">
+                  <label for="clave" class="col_2">Clave:</label>
+                  <input type="password" maxlength="150" size="14" name="clave" id="clave" class="col_2" >
+                </div>
+                <div class="col_1">
+                  <span class="col_2"><label for="guardar_clave" class="nh">Recordar este usuario</label></span>
+                  <input type="checkbox" value="1" name="guardar_clave" id="guardar_clave" >
+                </div>
+                <div class="submitButtonWrapper">
+                  <input type="submit" value="Login" id="btnlogin" onclick="doSubmit(this)">
+                </div>
+              </form>
+              <div class="accion">
+                    <img src="/images/iconos/key.png" width="16" height="16" alt=""> <a href="/comunidad/recordarclave.php">¿Olvidaste tu clave?</a>
+                    <img src="/images/iconos/user.png" width="16" height="16" alt=""> <a href="/comunidad/registro/">Registrarse</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+      <div id="accionnavega" class="sprite">Navegaci&oacute;n</div>
+      <div class="clearfix"></div>
+    </header>
+    <div id="localizador">
+      <div id="breadcrumbs"><a href="/index.php">DesarrolloWeb.com</a> &gt; <a href=../manuales/>Manuales</a> &gt;  <a href=../manuales/manual-angular-2.html>Manual de Angular</a></div>
+      <a id="accnavlocaliza" href="#" onclick="return false;" alt="menu responsive"></a>
+      </div>
+    <div id="supercuerpo">
+      <nav>
+        <ul>
+          <li class="navtit"><a href="/secciones/">Secciones</a></li>
+          <li><a href="/manuales/">Manuales</a></li>
+          <li><a href="/programas/">Programas</a></li>
+          <li><a href="/faq/">FAQs</a></li>
+          <li><a href="/directorio/">Directorio</a></li>
+          <li><a href="/videos/">V&iacute;deos</a></li>
+          <li><a href="/en-directo/">En directo</a></li>
+        </ul>
+        <ul>
+          <li class="navtit"><a href="/monotematicos/">Monotem&aacute;ticos</a></li>
+          <li><a href="/desde0/">Desde 0</a></li>
+          <li><a href="/diseno-web/">Diseño web</a></li>
+          <li><a href="/html/">HTML</a></li>
+          <li><a href="/css/">CSS</a></li>
+          <li><a href="/javascript/">Javascript</a></li>
+          <li><a href="/asp/">ASP</a></li>
+          <li><a href="/php/">PHP</a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </nav>
+      <div role="main" id="contenido">
+            <div id="columnaprincipal">
+              <section>
+	<article class="articulo">
+		<h1>Manual de Angular</h1>		<ul class="inline_list">
+			<li class="addcommentsico">
+				<span class="icon-chat"></span>
+				<a href="/comentarios/anadir.php?manual=195">Comentar</a>
+			</li>
+						<li class="icocoment">
+				<span class="icon-comment-stroke"></span>
+				<a href="#comentarios">Ver comentarios (17)</a>			</li>
+						<li class="icocoment">
+				<span class="icon-arrow-right"></span>
+				<a href="#capitulos195">Capítulos</a>			</li>
+						<li class="icocoment">
+				<span class="icon-cloud-download"></span>
+				<a href="/app.php?slug=manual-angular2&manual=Manual+de+Angular">Descargas</a>			</li>
+					</ul>
+
+				<a name="manual195"></a>
+<div class="col_1 clearfix">
+
+			<div class='descripcion'>
+									<div class='robapaginas'>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dw_roba -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-2899450519669111"
+     data-ad-slot="1253686019"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+					</div>
+				<p>
+Comenzamos la redacción a nuestro Manual de Angular, la evolución del framework Javascript más popular para el desarrollo de aplicaciones del lado del cliente.
+</p><p>
+En esta página irás viendo los artículos del Manual de Angular según los vayamos publicando a lo largo de los próximos meses.
+</p><p>
+Nuestro objetivo es recorrer las piezas principales de este potente framework y estudiar los mecanismos para el desarrollo de aplicaciones web universales con Angular 2. De momento encontrarás una estupenda introducción al desarrollo con el nuevo Angular, y abordaremos muchos más detalles en breve.
+</p>
+<p>
+Este manual aborda el framework Angular, en sus versiones 2 en adelante. Cabe aclarar que, poco después de salir la versión de Angular 2, el framework cambió de nombre a Angular. A partir de aquí se han ido publicando diversas entregas con números basados en el versionado semántico, pero siempre bajo la misma base tecnológica. Por tanto, este manual es válido tanto si quieres conocer Angular 2 o Angular 4 o las que vengan, ya que el framework en sí sigue manteniendo sus mismas bases.<p><span class="icon-arrow-right"></span> <a href="#capitulos195">Ver los capítulos</a></p>			</div>
+
+			<div class="col_1 mt">
+
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+	  {lang: 'es'}
+	</script>
+
+	
+	<div class="col_1">
+		<ul class="col_1 inline_list redes_sociales">
+			<li>
+				<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: es_ES
+				</script>
+				<script type="IN/Share" data-counter="top"></script>
+			</li>
+			<li>
+				<g:plusone size="tall"></g:plusone>
+			</li>
+			<li>
+				<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+				<div>
+			    <a href="//twitter.com/share" class="twitter-share-button"
+			       data-url="http://www.desarrolloweb.com/manuales/manual-angular-2.html"
+			       data-counturl="http://www.desarrolloweb.com/manuales/manual-angular-2.html"
+			       data-count="vertical">Tweet</a>
+				</div>
+			</li>
+			<li>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=459742597430134";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="http://www.desarrolloweb.com/manuales/manual-angular-2.html" data-width="150" data-layout="box_count" data-action="recommend" data-show-faces="false" data-send="false"></div>
+			</li>
+		</ul>
+		<div class="col_1">
+					</div>
+	</div>
+
+</div> <!-- col_1 --><p style="clear:both;"><b>Si te parece &uacute;til este manual ay&uacute;danos compartiendo!! :)</b></p>
+			<div/>
+							<div class="descargasapp">
+					<div class="appleft">
+						<h2>Descargar  como libro electrónico</h2>
+						<p>
+							Este texto 'Manual de Angular' se encuentra disponible para descarga como libro electrónico. Ideal para imprimir o leer en el ordenador personal, dispositivos y eReaders.
+						</p><p>
+							Puedes acceder a través de la <a href="/app.php?slug=manual-angular2&manual=Manual+de+Angular">App de DesarrolloWeb.com</a>
+						</p>
+					</div>
+					<div class="appright">
+												<img src="/images/icono-ereader-grande.png">
+					</div>
+				</div>
+			
+		<div style="col_1">
+			<a name="capitulos195"></a>
+		<span class="col_1 h2"><b style="font-size: 1.2em;">Introducción al desarrollo con Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">En esta primera parte del manual vamos a dar los primeros pasos para desarrollar aplicaciones con Angular. Veremos cómo crear el esqueleto de la aplicación básica y conoceremos los principales componentes de todo proyecto.</b></p>				<div class="col_1 mb">
+										<h3>
+						1.- <a href="../articulos/introduccion-angular2.html">Introducción a Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué es Angular. Por qué se ha decidido escribir desde cero el popular framework Javascript y qué necesidades y carencias resuelve con respecto a su antecesor.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/introduccion-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						2.- <a href="../articulos/angular-cli.html">Angular CLI</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué es Angular CLI, el intérprete de línea de comandos de Angular 2 que te facilitará el inicio de proyectos y la creación del esqueleto, o scaffolding, de la mayoría de los componentes de una aplicación Angular.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/angular-cli.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						3.- <a href="../articulos/analisis-carpetas-proyecto-angular2.html">Análisis de las carpetas de un proyecto básico con Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Angular 2 exige un marco de trabajo más concreto y avanzado. Vemos los archivos y carpetas que nos hacen falta para comenzar un proyecto básico.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/analisis-carpetas-proyecto-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						4.- <a href="../articulos/codigo-aplicacion-angular.html">Vista de pájaro al código de una aplicación Angular (4)</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Una aproximación a los elementos principales que encontramos en una aplicación Angular, versión 4, entendiendo el código.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/codigo-aplicacion-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						5.- <a href="../articulos/codigo-proyecto-inicial-angular2.html">Zambullida en el código del proyecto inicial de Angular 2</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Comenzamos a analizar el código de un proyecto básico con Angular 2, en las primeras versiones, generado con Angular CLI. Prestamos al index de la aplicación y al componente principal, que podremos editar para comprobar el funcionamiento.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/codigo-proyecto-inicial-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						6.- <a href="../articulos/introduccion-componentes-angular2.html">Introducción a los componentes en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Un primer acercamiento al mundo de los componentes en Angular (2 en adelante), a través del componente inicial que se crea en todo nuevo proyecto. Aprenderás a reconocer sus partes y realizaremos unas modificaciones.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/introduccion-componentes-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						7.- <a href="../articulos/sintaxis-vistas-angular2.html">Sintaxis para las vistas en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Expresiones, binding, propiedades, eventos. Son muchas cosas las que podemos expresar en las vistas HTML de las aplicaciones Angular 2. Te ofrecemos una introducción general.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/sintaxis-vistas-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Los componentes en Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">Abordamos el desarrollo basado en componentes con todo detalle. Es la pieza más importante de Angular que nos permitirá no solo estructurar una aplicación de una manera ordenada, sino encapsular funcionalidad y facilitar una arquitectura avanzada y de fácil mantenimiento de los proyectos Javascript con la nueva versión de este framework.</b></p>				<div class="col_1 mb">
+										<h3>
+						8.- <a href="../articulos/concepto-teorico-componente-angular2.html">El concepto de los componentes en Angular y su arquitectura</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué es un componente para Angular y cómo usaremos los componentes para realizar la arquitectura de una aplicación.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/concepto-teorico-componente-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						9.- <a href="../articulos/decorador-componentes-angular2.html">Decorador de componentes en Angular 2</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué es un decorador de componentes, qué función tiene y cómo se implementa en un componente básico de Angular 2.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/decorador-componentes-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						10.- <a href="../articulos/crear-componente-nuevo-angular2.html">Crear un componente nuevo con Angular 2</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						En este artículo te vamos a enseñar a crear un nuevo componente con Angular CLI y luego a usarlo en tu aplicación Angular 2.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/crear-componente-nuevo-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						11.- <a href="../articulos/usar-componente-angular2.html">Usar un componente en Angular 2</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo se usan componentes creados por nosotros en Angular 2, una tarea que si bien es sencilla requiere de varios pasos.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/usar-componente-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Lo básico de los módulos en Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">Vamos ahora a abordar las bases de otro de los actores principales de las aplicaciones desarrolladas con Angular: los módulos. Un módulo  (module en inglés) es una reunión de componentes y otros artefactos como directivas o pipes. Los módulos nos sirven principalmente para organizar el código de las aplicaciones Angular y por tanto debemos aprender a utilizarlos bien.</b></p>				<div class="col_1 mb">
+										<h3>
+						12.- <a href="../articulos/trabajar-modulos-angular.html">Trabajar con módulos en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo crear módulos, agrupaciones de componentes, directivas o pipes, en el framework Javascript Angular. Cómo crear componentes dentro de un módulo y cómo usarlos en otros modules.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/trabajar-modulos-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Directivas esenciales de Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">Vamos a conocer algunas directivas esenciales ofrecidas por el propio framework, para el desarrollo de las vistas en Angular.</b></p>				<div class="col_1 mb">
+										<h3>
+						13.- <a href="../articulos/directiva-nglass-angular2.html">Directiva ngClass en Angular 2</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Estudio de la directiva ngClass de Angular 2, ejemplo práctico de un componente que usa esa directiva.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/directiva-nglass-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						14.- <a href="../articulos/directiva-ngfor-angular2.html">Directiva ngFor de Angular 2</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicamos la directiva ngFor, o *ngFor, que nos permite repetir una serie de veces un bloque de HTML en aplicaciones Angular 2.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/directiva-ngfor-angular2.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						15.- <a href="../articulos/directiva-ngmodel-angular.html">Directiva ngModel</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicaciones sobre la directiva ngModel de Angular, con ejemplos de uso diversos, con binding de una y dos direcciones. Importar FormsModule para su funcionamiento en Angular 4.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/directiva-ngmodel-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Binding en Angular al detalle</b></span> <p><b style="font-size: 1.2em; color: #999;">En los siguientes artículos vamos a explorar detenidamente el sistema de data-binding creado con Angular, tratando con profundidad algunos temas ya usados dentro de este manual, así como abordando nuevos temas importantes relacionados con el bindeo de datos.</b></p>				<div class="col_1 mb">
+										<h3>
+						16.- <a href="../articulos/binding-interpolacion-angular.html">Interpolación {{}} en Angular al detalle</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Todo lo que tienes que saber sobre el binding por  interpolación de strings en Angular, generada con la sintaxis de las dobles llaves {{}}.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/binding-interpolacion-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						17.- <a href="../articulos/binding-propiedades-angular.html">Binding a propiedades en Angular al detalle</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué es el property binding, junto con una serie de detalles importantes sobre el bindeo a propiedades que como desarrollador Angular debes conocer.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/binding-propiedades-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						18.- <a href="../articulos/binding-propiedad-vs-interpolacion-strings.html">Binding a propiedad vs interpolación de strings, en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cuándo usar el binding de propiedad o la interpolación de strings, dos alternativas con objetivos distintos en Angular, que a veces pueden confundir.
+						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/binding-propiedad-vs-interpolacion-strings.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						19.- <a href="../articulos/binding-atributo-angular.html">Binding a atributo en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué es el binding a atributo, por qué debemos conocerlo. En qué casos aplica el binding de atributo y ejemplos de uso.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/binding-atributo-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						20.- <a href="../articulos/declaraciones-eventos-statements-angular.html">Declaraciones de eventos en templates Angular al detalle</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué son template statements y cómo declarar comportamientos ante eventos en Angular. Contexto del template accesible en las sentencias de eventos.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/declaraciones-eventos-statements-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						21.- <a href="../articulos/comunicacion-componentes-input.html">Comunicación entre componentes con @Input</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Interacción entre componentes de Angular, enviando datos a través de propiedades de entrada, definidas con el decorador @Input.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/comunicacion-componentes-input.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						22.- <a href="../articulos/emision-eventos-output-angular.html">Emisión de eventos personalizados con @Output en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicamos la comunicación de cambios de los hijos hacia los padres por medio de eventos personalizados, generados con propiedades @Output.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/emision-eventos-output-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Servicios en Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">Comenzamos una serie de artículos que nos explicarán qué son los servicios, una de las piezas principales de las aplicaciones en Angular. Estudiaremos cómo usar servicios dentro de aplicaciones, cómo crearlos, cómo agregarlos a módulos o componentes, cómo instanciar servicios, etc. Veremos también qué papel juegan los servicios dentro del marco de una aplicación, con ejemplos de uso que puedan ilustrar las buenas prácticas a los programadores.</b></p>				<div class="col_1 mb">
+										<h3>
+						23.- <a href="../articulos/servicios-angular.html">Servicios en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué son los servicios en el framework Javascript Angular, cómo crear nuestros primeros services, cómo usarlos desde los componentes.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/servicios-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						24.- <a href="../articulos/clases-interfaces-servicios-angular.html">Usar clases e Interfaces en los servicios Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Al desarrollar servicios con Angular es una buena idea usar clases e Interfaces para definir las estructuras de datos. Veremos cómo y por qué.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/clases-interfaces-servicios-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						25.- <a href="../articulos/practica-angular-modulos-componentes-servicios.html">Práctica Angular con Módulos, Componentes y Servicios</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Vamos a crear un ejemplo práctico con lo visto hasta el momento en el Manual de Angular en el que pondremos en uso los conocimientos adquiridos sobre módulos, componentes y servicios.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/practica-angular-modulos-componentes-servicios.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Observables en Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">En los próximos artículos introduciremos el concepto de observable, una herramienta para la programación reactiva dentro de aplicaciones de Angular, capaz de aumentar sensiblemente el rendimiento de las aplicaciones.</b></p>				<div class="col_1 mb">
+										<h3>
+						26.- <a href="../articulos/introduccion-teorica-observables-angular.html">Introducción teórica a los observables en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Aclaramos conceptos sobre los observables, por qué son importantes en Angular., qué es la programación reactiva y qué es RxJS.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/introduccion-teorica-observables-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						27.- <a href="../articulos/practica-observables-angular.html">Práctica de observables en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Primeros pasos trabajando con observables en una aplicación desarrollada con Angular.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/practica-observables-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						28.- <a href="../articulos/eliminar-suscripcion-observable-angular.html">Eliminar la suscripción a un observable de Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo eliminar una suscripción a un observable, desde el observador, necesario cuando el elemento se destruye para no dejar en memoria la suscripción.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/eliminar-suscripcion-observable-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Sistema de routing</b></span> <p><b style="font-size: 1.2em; color: #999;">El sistema de routing es algo fundamental en las aplicaciones desarrolladas con Angular. En los siguientes artículos aprenderás a implementar rutas en aplicaciones web del estilo SPA (Single Page Application) y gestionar las rutas, de modo que se puedan pasar parámetros entre ellas, que los navegadores sean capaces de mostrar la ruta activa, etc.</b></p>				<div class="col_1 mb">
+										<h3>
+						29.- <a href="../articulos/introduccion-sistema-routing-angular.html">Introducción al sistema de Routing en Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué es el sistema de routing, qué elementos contiene y cómo configurar las primeras rutas en una aplicación Angular.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/introduccion-sistema-routing-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						30.- <a href="../articulos/rutas-angular-mostrar-activa.html">Rutas en Angular: mostrar la ruta activa</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo mostrar la ruta activa en el navegador de una aplicación Angular, aquella que se está mostrando en este momento.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/rutas-angular-mostrar-activa.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						31.- <a href="../articulos/parametros-rutas-angular.html">Parámetros en las rutas Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo trabajar con parámetros en las rutas, configurar el sistema de routing para crear rutas que envían parámetros y recibir los parámetros en los componentes.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/parametros-rutas-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Apéndice</b></span> <p><b style="font-size: 1.2em; color: #999;">Otros temas de interés relativos al desarrollo con el framework Javascript Angular para el desarrollo de aplicaciones web. Una serie de artículos de temas diversos que no siguen un orden especial y que pueden resultar de interés para los desarrolladores Angular o TypeScript.</b></p>				<div class="col_1 mb">
+										<h3>
+						32.- <a href="../articulos/depurar-typescript-angular.html">Cómo se depura el TypeScript en una aplicación Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo depurar usando el navegador, por medio de las herramientas de debug del inspector, del código TypeScript que escribimos para las aplicaciones de Angular.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/depurar-typescript-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+						
+				
+			<p style="clear: both;">
+
+
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dw_adaptable_piemanuales -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2899450519669111"
+     data-ad-slot="4067551616"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			</p>
+			<div class="col_1">
+				<a name="compartir"></a>
+				<h2 class="cabeceraAzul"><b>Compartir</b></h2>
+								<div class="col_1 mt">
+
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+	  {lang: 'es'}
+	</script>
+
+	
+	<div class="col_1">
+		<ul class="col_1 inline_list redes_sociales">
+			<li>
+				<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: es_ES
+				</script>
+				<script type="IN/Share" data-counter="top"></script>
+			</li>
+			<li>
+				<g:plusone size="tall"></g:plusone>
+			</li>
+			<li>
+				<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+				<div>
+			    <a href="//twitter.com/share" class="twitter-share-button"
+			       data-url="http://www.desarrolloweb.com/manuales/manual-angular-2.html"
+			       data-counturl="http://www.desarrolloweb.com/manuales/manual-angular-2.html"
+			       data-count="vertical">Tweet</a>
+				</div>
+			</li>
+			<li>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=459742597430134";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="http://www.desarrolloweb.com/manuales/manual-angular-2.html" data-width="150" data-layout="box_count" data-action="recommend" data-show-faces="false" data-send="false"></div>
+			</li>
+		</ul>
+		<div class="col_1">
+					</div>
+	</div>
+
+</div> <!-- col_1 -->			</div>
+
+			<div class="col_1" id="comentarios"><div class="col_1 mt">
+	<p class="cabeceraAzul">
+		<a name="comentarios"></a><b>Comentarios</b>
+	</p>
+
+	<div>
+				<div class="accion">
+			<div class="accion icocoment">
+						</div>
+			<div class="accion addcommentsico">
+				<span class="icon-chat"></span>
+				<a href="/comentarios/anadir.php?manual=195">Enviar un comentario  al manual</a>
+			</div>
+					</div>
+	</div>
+				<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">Serpico</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario5519" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					06/7/2016				</div>
+								<b>Excelente introducción a Angular 2</b>
+				<br>
+								<div>
+					Gracias a Desarrollo Web por estar siempre actualizados con las nuevas herramientas.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66202"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66202, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Manolo</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					15/7/2016				</div>
+								<b>Comenzando el manual de Angular 2</b>
+				<br>
+								<div>
+					Fantástico chicos! estoy comenzando con Angular 2, me vendrá muy bien este manual.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66273"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66273, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Lucas Vazquez</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					03/8/2016				</div>
+								<b>Imprimir</b>
+				<br>
+								<div>
+					Me gustaría imprimir este manual de AngularJS 2.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66435"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66435, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Pablo Junior Almonte</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					30/8/2016				</div>
+								<b>Descarga de manual</b>
+				<br>
+								<div>
+					muy buen manual.. existe algun pdf del manual?? para descargarlo y llevar lo conmigo.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66636"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66636, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">erama</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario6866" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					07/9/2016				</div>
+								<b>GRACIAS!</b>
+				<br>
+								<div>
+					Solo eso!, gracias por generar y compartir conocimiento				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66705"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66705, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Gerardo Andres Gutierrez Rodriguez</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					12/9/2016				</div>
+								<b>Despliegue en ambientes productivos.</b>
+				<br>
+								<div>
+					Hola quisiera saber como se le hace para desplegar una aplicación ya terminada usando angular cli en un ambiente productivo usando un servidor nginx				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66750"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66750, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">midesweb</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><a href="/usuarios/midesweb.html" style="text-decoration: none;"><img  class="cargatipusuario"  id="tipusuario6347" border="0" src="/comunidad/fotos/600892192516.jpg" width=70 height=55 vspace=2></a>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					23/9/2016				</div>
+								<b>Descarga del manual en la APP</b>
+				<br>
+								<div>
+					Hola! <br />
+Este manual ya se puede descargar. Está disponible en la App de DesarrolloWeb.<br />
+https://app.desarrolloweb.com/manuales/manual-angular2				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66828"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66828, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>David Rivero</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					26/9/2016				</div>
+								<b>No he podido descargar</b>
+				<br>
+								<div>
+					Intente descargar este manual por medio de la app y no me lo permite, me dice que no puede verificar mis descargas restantes, aun no he descargado nada, me urge este manual. Gracias Miguel y Alberto por este y otros recursos y saludos desde Venezuela.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66842"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66842, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Alex</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					29/9/2016				</div>
+								<b>descargas</b>
+				<br>
+								<div>
+					Buenos días en mi perfil en al zona de descargas me pone que tengo 192 descargas restantes pero entro para descargar el manual y me dice que vaya a la nueva plataforma peor ahi no puedo ingresar con las mismas credenciales como puedo hacer???				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66864"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66864, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">midesweb</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><a href="/usuarios/midesweb.html" style="text-decoration: none;"><img  class="cargatipusuario"  id="tipusuario8136" border="0" src="/comunidad/fotos/600892192516.jpg" width=70 height=55 vspace=2></a>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					09/10/2016				</div>
+								<b>para descargar el manual de angular 2</b>
+				<br>
+								<div>
+					El fallo al descargar, por no poder obtener descargas restantes, lo hemos resuelto en la App. Si no te funciona es mejor que nos escribas un email.<br />
+<br />
+Para Alex, los sistemas de descarga son independientes. También mejor que me escribas y poder traspasarte algunas descargas de manuales. Yo soy miguel@desarrolloweb.com				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66940"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66940, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Choni</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					08/1/2017				</div>
+								<b>Sobra esta app</b>
+				<br>
+								<div>
+					Bueno amigos, creo q el sitio esta muy bueno, pero no se por que la app no funciona, quiero descargarse el manual de angular 2 y la app no me funciona bien, ni desde móvil ni pc, quisiera si esta a sus alcance un libro completo( pdf), de lo q es angular 2 con todo desde cero, con el contenido de typescript, y todo lo necesario para desarrollar web con angular 2 vengó de programar desktop con qt y c++, de ka web no se nada, mi correo choninoa@gmail.com, soy cubano, muchas gracias espero su ayuda,				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario67669"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(67669, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>jose reyes</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					30/1/2017				</div>
+								<b>Manual pdf</b>
+				<br>
+								<div>
+					Buen día, muchas gracias por sus aportes.<br />
+e intentado descargar el manual pero no me lo permite.<br />
+alguna otra dirección donde pueda obternerlo?<br />
+<br />
+<br />
+Saludos.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario67849"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(67849, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">ar_masuoka</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario6026" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					02/2/2017				</div>
+								<b>Descarga</b>
+				<br>
+								<div>
+					Buen día soy nuevo en esta web, he querido descargar el manual en digital (Epub) según mi panel de control todavía tengo opción a descargar un archivo mas, siguiendo las instrucciones me sale el siguiente comentario:<br />
+<br />
+Estado de la descarga<br />
+<br />
+Este manual no está autorizado para descarga todavía. Para autorizarlo simplemente descarga alguno de los archivos que incluye.<br />
+<br />
+No se ha que otro archivo(s) se refiera pero siento que si descargo algún otro archivo su sistema (desarrolloweb) no me va dejar descargar el manual de angular 2 por que ya no tendré las 2 descargas autorizadas.<br />
+Previamente descargue el manual de JavaScript y si bajo el otro archivo que me solicitan para la autorizacion del manual e Angular 2 serian las dos descargas antes mencionadas.<br />
+<br />
+De antemano muchas gracias por la atencion				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario67870"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(67870, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>mili</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					13/2/2017				</div>
+								<b>Angular 2 Dist</b>
+				<br>
+								<div>
+					Hola, tengo una consulta, siempre veo tutoriales de como crear app con angular 2 pero no veo como generar los archivos finales que creo q van en la carpeta dist, porque al crear mi proyecto con cli no veo la carpeta dist				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario67960"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(67960, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Jose</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					10/7/2017				</div>
+								<b>AngularJs</b>
+				<br>
+								<div>
+					Por si interesa, yo estoy haciendo una serie de tutoriales de angular Js 2 para aprender desde 0.<br />
+https://quecosasleo.com/2017/07/angularjs-2-desde-0-tutorial1/<br />
+Iré actualizando poco a poco				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario69441"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(69441, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">mvegala</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario7361" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					01/3/2018				</div>
+								<b>Sobre Manual</b>
+				<br>
+								<div>
+					Me encanto el manual, solo que puedo descargarlo, no entiendo la app para descargar no me deja, si alguien pudiera ayudar!				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario70715"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(70715, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Leonardo Simes</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					29/5/2018				</div>
+								<b>Gracias</b>
+				<br>
+								<div>
+					Fant&aacute;stico este manual, como todos los que hacen ustedes. Cada vez que necesito aprender algo lo busco en esta web. &lt;br /&gt;<br />
+Muy did&aacute;cticos, excelente!				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario70991"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(70991, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+		
+		<div class="accion">
+			<div class="accion icocoment">
+						</div>
+			<div class="accion addcommentsico">
+				<span class="icon-chat"></span>
+				<a href="/comentarios/anadir.php?manual=195">Enviar un comentario  al manual</a>
+			</div>
+					</div>
+	</div></div>			</div>
+		</div>
+	</article>
+</section>
+
+		</div>
+      <!-- fin columna principal -->
+
+      <!-- Barra lateral -->
+      <aside>
+
+                <div id="usuarios">
+          <div class="icousuario">
+            <span class="icon-user"></span>
+            <span>Usuarios:</span> <a id="enlacelogin" href="#" onclick="$('.cu250mdWrapper').slideToggle();return false;">Login</a> | <a href="/comunidad/registro/">Registro</a>
+            <div class="cu250mdWrapper" id="flogin">
+              <div class="cu250md">
+                <div class="accesoUsuarios">Acceso usuarios</div>
+                <div class="errorLoginWrapper">
+                  <div class="errorLogin"></div>
+                </div>
+                <form method="post" action="/dologin.php" id="formullogin" onsubmit="return false;">
+                  <input type="hidden" value="" name="id_descarga">
+                  <input type="hidden" value="/" name="origen">
+                  <div>
+                    <label class="fuente8" for="usuario2">E-mail:</label>
+                    <input type="text" maxlength="150" size="14" name="usuario" id="usuario2">
+                  </div>
+                  <div>
+                    <label class="fuente8" for="clave2">Clave:</label>
+                    <input type="password" maxlength="150" size="14" name="clave" id="clave2" >
+                  </div>
+                  <div>
+                    <label class="fuente8" for="guardar_clave2">Recordar este usuario</label>
+                    <input type="checkbox" value="1" name="guardar_clave" id="guardar_clave2">
+                  </div>
+
+                  <div class="submitButtonWrapper">
+                    <input type="submit" value="Login" id="btnlogin" onclick="doSubmit(this)">
+                  </div>
+                </form>
+                <div class="accion">
+                  <div class="clearfix">
+                    <a href="/comunidad/recordarclave.php"><img src="/images/iconos/key.png" width="16" height="16" alt=""> ¿Olvidaste tu clave?</a>
+                  </div>
+                  <div class="clearfix">
+                    <a href="/comunidad/registro/"><img src="/images/iconos/user.png" width="16" height="16" alt=""> Registrarse</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="bannerslat">
+
+        
+        </div>
+        <div class="col_1 tac">
+          
+        </div>
+      </aside>
+      <!-- Fin de Barra lateral -->
+      <div class="clearfix"></div>
+    </div>
+    <!-- fin div role main -->
+  </div>
+    <!-- fin div supercuerpo -->
+
+
+    <!-- PIE DE P?GINA -->
+    <footer id="pieprincipal">
+      <div id="todopie">
+        <div class="seccionpie">
+          <div class="seccionpieh1">Principales</div>
+          <ul>
+            <li><a href="/manuales/">Manuales</a></li>
+            <li><a href="/faq/">FAQs</a></li>
+            <li><a href="/en-directo/">En directo</a></li>
+            <li><a href="/videos/">Vídeos</a></li>
+          </ul>
+        </div>
+        <div class="seccionpie">
+          <div class="seccionpieh1">Monotemáticos</div>
+          <ul>
+            <li><a href="/desde0/">Desde cero</a></li>
+            <li><a href="/html/">HTML</a>, <a href="/css/">CSS</a></li>
+            <li><a href="/javascript/">Javascript</a>, <a href="/ajax/">Ajax</a></li>
+            <li><a href="/diseno-web/">Diseño</a>, <a href="/asp/">ASP</a></li>
+          </ul>
+        </div>
+        <div class="seccionpie" id="encuentranos">
+          <div class="fb">
+            <a href="https://www.facebook.com/desarrollowebcom" rel="nofollow" class="enrs" target="_blank">
+              <span class="icon-facebook2"></span>
+            </a>
+          </div>
+          <div class="twitter"><a href="http://twitter.com/deswebcom" rel="nofollow" class="enrs" target="_blank"><span class="icon-twitter2"></span></a></div>
+          <div class="youtube">
+            <a href="http://www.youtube.com/user/desarrollowebcom" rel="nofollow" class="enrs" target="_blank">
+              <span class="icon-youtube2"></span>
+            </a>
+          </div>
+          <div class="googleplus">
+            <a href="https://plus.google.com/+desarrolloweb" rel="nofollow" class="enrs" target="_blank"><span class="icon-google-plus2"></span></a>
+          </div>
+
+        </div>
+       
+      </div> <!-- todo pie -->
+      <div class="clearfix"></div>
+      <div id="piefin">
+        <ul>
+          <li><a href="/">Desarrolloweb.com</a></li>
+          <li><a href="/copyright/" rel="nofollow">Copyright</a></li>
+          <li><a href="/anunciese/" rel="nofollow">Publicidad</a></li>
+          <li><a href="/acercade/">Acerca de</a></li>
+          <li><a href="/datos-legales/" rel="nofollow">Datos legales</a></li>
+          <li><a href="/datos-legales/cookies.php" rel="nofollow">P. de cookies</a></li>
+          <li><a href="/contacta/" rel="nofollow">Contacta</a></li>
+        </ul>
+      </div>
+
+    </footer>
+    <!-- FIN PIE DE PAGINA -->
+  </div>
+  <!-- fin container -->
+
+  <script src="https://cookie.consent.is/cc/afd831ed.js"></script>
+  <script src="/js/min/script-min.js"></script>
+
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-365134-1"></script>
+  <script>
+  var gtagId = 'UA-365134-1';
+  // Disable tracking by default
+  window['ga-disable-' + gtagId] = true;
+
+  // Initialize gtag
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  </script>
+  
+
+</body>
+</html>

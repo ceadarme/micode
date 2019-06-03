@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DataComparison>
+  <Version>10</Version>
+  <ConnectionProperties1>
+    <ConnectionString>Data Source=LAPTOP-GKIUJV3L\PRUEBAS;Initial Catalog=AdventureWorks2017;Persist Security Info=True;User ID=sa;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</ConnectionString>
+    <FullDisplayName>LAPTOP-GKIUJV3L\PRUEBAS.AdventureWorks2017 (sa)</FullDisplayName>
+  </ConnectionProperties1>
+  <ConnectionProperties2>
+    <ConnectionString>Data Source=LAPTOP-GKIUJV3L\PRUEBAS;Initial Catalog=AdventureWorks2017;Persist Security Info=True;User ID=sa;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True</ConnectionString>
+    <FullDisplayName>LAPTOP-GKIUJV3L\PRUEBAS.AdventureWorks2017 (sa)</FullDisplayName>
+  </ConnectionProperties2>
+  <SessionSettings>Default</SessionSettings>
+  <DeselectedTable>[dbo].[AWBuildVersion]</DeselectedTable>
+  <DeselectedTable>[dbo].[DatabaseLog]</DeselectedTable>
+  <DeselectedTable>[dbo].[ErrorLog]</DeselectedTable>
+  <DeselectedTable>[HumanResources].[Department]</DeselectedTable>
+  <DeselectedTable>[HumanResources].[Employee]</DeselectedTable>
+  <DeselectedTable>[HumanResources].[EmployeeDepartmentHistory]</DeselectedTable>
+  <DeselectedTable>[HumanResources].[EmployeePayHistory]</DeselectedTable>
+  <DeselectedTable>[HumanResources].[JobCandidate]</DeselectedTable>
+  <DeselectedTable>[HumanResources].[Shift]</DeselectedTable>
+  <DeselectedTable>[Person].[Address]</DeselectedTable>
+  <DeselectedTable>[Person].[AddressType]</DeselectedTable>
+  <DeselectedTable>[Person].[BusinessEntity]</DeselectedTable>
+  <DeselectedTable>[Person].[BusinessEntityAddress]</DeselectedTable>
+  <DeselectedTable>[Person].[BusinessEntityContact]</DeselectedTable>
+  <DeselectedTable>[Person].[ContactType]</DeselectedTable>
+  <DeselectedTable>[Person].[CountryRegion]</DeselectedTable>
+  <DeselectedTable>[Person].[EmailAddress]</DeselectedTable>
+  <DeselectedTable>[Person].[Password]</DeselectedTable>
+  <DeselectedTable>[Person].[Person]</DeselectedTable>
+  <DeselectedTable>[Person].[PersonPhone]</DeselectedTable>
+  <DeselectedTable>[Person].[PhoneNumberType]</DeselectedTable>
+  <DeselectedTable>[Person].[StateProvince]</DeselectedTable>
+  <DeselectedTable>[Production].[BillOfMaterials]</DeselectedTable>
+  <DeselectedTable>[Production].[Culture]</DeselectedTable>
+  <DeselectedTable>[Production].[Document]</DeselectedTable>
+  <DeselectedTable>[Production].[Illustration]</DeselectedTable>
+  <DeselectedTable>[Production].[Location]</DeselectedTable>
+  <DeselectedTable>[Production].[Product]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductCategory]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductCostHistory]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductDescription]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductDocument]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductInventory]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductListPriceHistory]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductModel]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductModelIllustration]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductModelProductDescriptionCulture]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductPhoto]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductProductPhoto]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductReview]</DeselectedTable>
+  <DeselectedTable>[Production].[ProductSubcategory]</DeselectedTable>
+  <DeselectedTable>[Production].[ScrapReason]</DeselectedTable>
+  <DeselectedTable>[Production].[TransactionHistory]</DeselectedTable>
+  <DeselectedTable>[Production].[TransactionHistoryArchive]</DeselectedTable>
+  <DeselectedTable>[Production].[UnitMeasure]</DeselectedTable>
+  <DeselectedTable>[Production].[WorkOrder]</DeselectedTable>
+  <DeselectedTable>[Production].[WorkOrderRouting]</DeselectedTable>
+  <DeselectedTable>[Purchasing].[ProductVendor]</DeselectedTable>
+  <DeselectedTable>[Purchasing].[PurchaseOrderDetail]</DeselectedTable>
+  <DeselectedTable>[Purchasing].[PurchaseOrderHeader]</DeselectedTable>
+  <DeselectedTable>[Purchasing].[ShipMethod]</DeselectedTable>
+  <DeselectedTable>[Purchasing].[Vendor]</DeselectedTable>
+  <DeselectedTable>[Sales].[CountryRegionCurrency]</DeselectedTable>
+  <DeselectedTable>[Sales].[CreditCard]</DeselectedTable>
+  <DeselectedTable>[Sales].[Currency]</DeselectedTable>
+  <DeselectedTable>[Sales].[CurrencyRate]</DeselectedTable>
+  <DeselectedTable>[Sales].[Customer]</DeselectedTable>
+  <DeselectedTable>[Sales].[PersonCreditCard]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesOrderDetail]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesOrderHeader]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesOrderHeaderSalesReason]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesPerson]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesPersonQuotaHistory]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesReason]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesTaxRate]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesTerritory]</DeselectedTable>
+  <DeselectedTable>[Sales].[SalesTerritoryHistory]</DeselectedTable>
+  <DeselectedTable>[Sales].[ShoppingCartItem]</DeselectedTable>
+  <DeselectedTable>[Sales].[SpecialOffer]</DeselectedTable>
+  <DeselectedTable>[Sales].[SpecialOfferProduct]</DeselectedTable>
+  <DeselectedTable>[Sales].[Store]</DeselectedTable>
+</DataComparison>
