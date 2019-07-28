@@ -1,0 +1,17 @@
+conectando local con remoto de git
+crear carpeta de windows 
+tener remositorio remoto definido para clonar
+inicializar local
+git init
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+git remote add [origin] [SSH/HTTPS] Conecta un repositorio con nuestro equipo local.
+
+y listo ya puedes añadir o editar
+confirmar con git add
+y comit con git commit .
+
+y listo haora si git push
+
+git push origin master o destino

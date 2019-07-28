@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <title>Manual de AngularJS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="apple-touch-fullscreen" content="no" />
+
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="/images/icono_DW.png" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<meta name="author" content="DesarrolloWeb.com">
+
+<meta name="robots" content="index, follow">
+<link rel="stylesheet" href="/css/estilo2015.css">
+
+
+<script language="javascript" type="text/javascript" src="/js/mootools-core-1.4.5.js"></script><script language="javascript" type="text/javascript" src="/js/votacion.js"></script><script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+  {lang: 'es'}
+</script><meta property="og:title" content="Manual de AngularJS" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.desarrolloweb.com/manuales/manual-angularjs.html" />
+<meta property="og:image" content="http://www.desarrolloweb.com/images/logo-desarrolloweb100x60.gif" /><meta property="og:site_name" content="DesarrolloWeb.com" />
+<meta property="fb:admins" content="100001063850916" />
+<script>
+var base_dir = "https://desarrolloweb.com";
+
+(adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1;
+	</script>
+</head>
+
+<body >
+	<div id="container">
+   	<header>
+      <div id="logo">
+                <a href='http://desarrolloweb.com'>
+          <img src="/img/logo.png" alt="Logo de DesarrolloWeb.com">
+        </a>
+      </div>
+      <div id="iconosredes20">
+        <a href="http://www.facebook.com/desarrollowebcom/" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="facebook" id="fb20"></a>
+        <a href="http://www.twitter.com/deswebcom/" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="twitter" id="tw20"></a>
+        <a href="https://plus.google.com/111428356405969326386/posts" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="google plus" id="gp20"></a>
+        <a href="http://www.youtube.com/desarrollowebcom" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="youtube" id="yt20"></a>
+        <a href="http://www.desarrolloweb.com/rss/general_rss.php" rel="nofollow"><img src="/img/1x1.png" class="sprite" alt="rss" id="rss20"></a>
+      </div>
+
+      <div id="buscador">
+        <form action="/buscar.php " id="cse-search-box">
+          <div>
+            <input type="hidden" name="cx" value="partner-pub-2899450519669111">
+            <input type="hidden" name="cof" value="FORID:11">
+            <input type="hidden" name="ie" value="ISO-8859-1">
+            <input type="text" name="q" id="textobuscar" placeholder="ej. css"><input type="submit" name="sa" value="Buscar" id="botonbuscar">
+          </div>
+        <input name="siteurl" type="hidden" value="www.desarrolloweb.com/"><input name="ref" type="hidden" value=""><input name="ss" type="hidden" value=""></form>
+      </div>
+      <div class="loginbox">
+                <div class="icousuario">
+          <span class="icon-user"></span>
+           <a id="enlacelogin" href="#" onclick="$('.cu250mdWrapper').slideToggle();return false;" >Login</a> | <a href="/comunidad/registro/" >Registro</a>
+          <div class="cu250mdWrapper" id="2flogin">
+            <div class="cu250md">
+              <div class="accesoUsuarios col_1 mb">Acceso usuarios</div>
+              <div class="errorLoginWrapper">
+                 <div class="errorLogin"></div>
+              </div>
+              <form method="post" action="/dologin.php" id="formullogin" onsubmit="return false;">
+                <input type="hidden" value="" name="id_descarga">
+                <input type="hidden" value="/" name="origen">
+                <div class="col_1 mb sufix_1">
+                  <label for="usuario" class="col_2">E-mail:</label>
+                  <input type="text" maxlength="150" size="14" name="usuario" id="usuario" class="col_2" >
+                </div>
+                <div class="col_1 mb sufix_1">
+                  <label for="clave" class="col_2">Clave:</label>
+                  <input type="password" maxlength="150" size="14" name="clave" id="clave" class="col_2" >
+                </div>
+                <div class="col_1">
+                  <span class="col_2"><label for="guardar_clave" class="nh">Recordar este usuario</label></span>
+                  <input type="checkbox" value="1" name="guardar_clave" id="guardar_clave" >
+                </div>
+                <div class="submitButtonWrapper">
+                  <input type="submit" value="Login" id="btnlogin" onclick="doSubmit(this)">
+                </div>
+              </form>
+              <div class="accion">
+                    <img src="/images/iconos/key.png" width="16" height="16" alt=""> <a href="/comunidad/recordarclave.php">¿Olvidaste tu clave?</a>
+                    <img src="/images/iconos/user.png" width="16" height="16" alt=""> <a href="/comunidad/registro/">Registrarse</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+
+      <div id="accionnavega" class="sprite">Navegaci&oacute;n</div>
+      <div class="clearfix"></div>
+    </header>
+    <div id="localizador">
+      <div id="breadcrumbs"><a href="/index.php">DesarrolloWeb.com</a> &gt; <a href=../manuales/>Manuales</a> &gt;  <a href=../manuales/manual-angularjs.html>Manual de AngularJS</a></div>
+      <a id="accnavlocaliza" href="#" onclick="return false;" alt="menu responsive"></a>
+      </div>
+    <div id="supercuerpo">
+      <nav>
+        <ul>
+          <li class="navtit"><a href="/secciones/">Secciones</a></li>
+          <li><a href="/manuales/">Manuales</a></li>
+          <li><a href="/programas/">Programas</a></li>
+          <li><a href="/faq/">FAQs</a></li>
+          <li><a href="/directorio/">Directorio</a></li>
+          <li><a href="/videos/">V&iacute;deos</a></li>
+          <li><a href="/en-directo/">En directo</a></li>
+        </ul>
+        <ul>
+          <li class="navtit"><a href="/monotematicos/">Monotem&aacute;ticos</a></li>
+          <li><a href="/desde0/">Desde 0</a></li>
+          <li><a href="/diseno-web/">Diseño web</a></li>
+          <li><a href="/html/">HTML</a></li>
+          <li><a href="/css/">CSS</a></li>
+          <li><a href="/javascript/">Javascript</a></li>
+          <li><a href="/asp/">ASP</a></li>
+          <li><a href="/php/">PHP</a></li>
+        </ul>
+        <div class="clearfix"></div>
+      </nav>
+      <div role="main" id="contenido">
+            <div id="columnaprincipal">
+              <section>
+	<article class="articulo">
+		<h1>Manual de AngularJS</h1>		<ul class="inline_list">
+			<li class="addcommentsico">
+				<span class="icon-chat"></span>
+				<a href="/comentarios/anadir.php?manual=186">Comentar</a>
+			</li>
+						<li class="icocoment">
+				<span class="icon-comment-stroke"></span>
+				<a href="#comentarios">Ver comentarios (26)</a>			</li>
+						<li class="icocoment">
+				<span class="icon-arrow-right"></span>
+				<a href="#capitulos186">Capítulos</a>			</li>
+						<li class="icocoment">
+				<span class="icon-cloud-download"></span>
+				<a href="/app.php?slug=manual-angular-js&manual=Manual+de+AngularJS">Descargas</a>			</li>
+					</ul>
+
+				<a name="manual186"></a>
+<div class="col_1 clearfix">
+
+			<div class='descripcion'>
+									<div class='robapaginas'>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dw_roba -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:250px"
+     data-ad-client="ca-pub-2899450519669111"
+     data-ad-slot="1253686019"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+					</div>
+				<p>
+Este es un manual que nos introduce en el framework Javascript AngularJS, un conjunto de librerías de código abierto que nos sirven para hacer aplicaciones web avanzadas del lado del cliente. Es ideal para hacer aplicaciones de negocio y aplicaciones de gestión que se despliegan en una única página.
+</p><p>
+Usa el patrón de diseño habitualmente encontrado en el desarrollo web MVC, aunque en una variante llamada a veces MV* y a veces MVVM. Esto, junto con otras herramientas disponibles en Angular nos permite un desarrollo ordenado, sencillo de realizar y sobre todo más fácil de mantener en un futuro.
+</p><p>
+AngularJS está apoyado por Google y cada día más desarrolladores están adoptándolo, lo que nos da una idea del prometedor futuro de la librería. 
+</p>
+
+<p><span class="icon-arrow-right"></span> <a href="#capitulos186">Ver los capítulos</a></p>			</div>
+
+			<div class="col_1 mt">
+
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+	  {lang: 'es'}
+	</script>
+
+	
+	<div class="col_1">
+		<ul class="col_1 inline_list redes_sociales">
+			<li>
+				<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: es_ES
+				</script>
+				<script type="IN/Share" data-counter="top"></script>
+			</li>
+			<li>
+				<g:plusone size="tall"></g:plusone>
+			</li>
+			<li>
+				<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+				<div>
+			    <a href="//twitter.com/share" class="twitter-share-button"
+			       data-url="http://www.desarrolloweb.com/manuales/manual-angularjs.html"
+			       data-counturl="http://www.desarrolloweb.com/manuales/manual-angularjs.html"
+			       data-count="vertical">Tweet</a>
+				</div>
+			</li>
+			<li>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=459742597430134";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="http://www.desarrolloweb.com/manuales/manual-angularjs.html" data-width="150" data-layout="box_count" data-action="recommend" data-show-faces="false" data-send="false"></div>
+			</li>
+		</ul>
+		<div class="col_1">
+					</div>
+	</div>
+
+</div> <!-- col_1 --><p style="clear:both;"><b>Si te parece &uacute;til este manual ay&uacute;danos compartiendo!! :)</b></p>
+			<div/>
+							<div class="descargasapp">
+					<div class="appleft">
+						<h2>Descargar  como libro electrónico</h2>
+						<p>
+							Este texto 'Manual de AngularJS' se encuentra disponible para descarga como libro electrónico. Ideal para imprimir o leer en el ordenador personal, dispositivos y eReaders.
+						</p><p>
+							Puedes acceder a través de la <a href="/app.php?slug=manual-angular-js&manual=Manual+de+AngularJS">App de DesarrolloWeb.com</a>
+						</p>
+					</div>
+					<div class="appright">
+												<img src="/images/icono-ereader-grande.png">
+					</div>
+				</div>
+			
+		<div style="col_1">
+			<a name="capitulos186"></a>
+		<span class="col_1 h2"><b style="font-size: 1.2em;">Introducción a AngularJS</b></span> <p><b style="font-size: 1.2em; color: #999;">Esta es una introducción de manera conceptual al framework Javascript AngularJS. Explicamos por qué cada vez tiene más importancia el desarrollo de aplicaciones web con alta carga de Javascript y por qué son esenciales  este tipo de librerías para una programación más sencilla, rápida y de fácil mantenimiento. Completaremos la introducción con una práctica en la que podremos experimentar con un primer ejemplo en Angular.</b></p>				<div class="col_1 mb">
+										<h3>
+						1.- <a href="../articulos/por-que-angularjs.html">Por qué AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo los frameworks Javascript en general y AngularJS en concreto nos sirven para solucionar las necesidades actuales de la informática, en cuanto a desarrollo multiplataforma de aplicaciones grandes o enormes que se asemejan a las de escritorio.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/por-que-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						2.- <a href="../articulos/que-es-angularjs-descripcion-framework-javascript-conceptos.html">Qué es AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Descripción general sobre AngularJS, el framework Javascript, así como los principales componentes que tiene y los conceptos que debemos conocer antes de poner manos en el código.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/que-es-angularjs-descripcion-framework-javascript-conceptos.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						3.- <a href="../articulos/angularjs-vs-jquery.html">AngularJS Vs jQuery</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						¿Complementarias? ¿Competidoras? Analizamos similitudes y diferencias de jQuery y AngularJS, casos en los que sería más aconsejable una u otra librería y una comparativa de código, de un mismo problema, resuelto con ambas herramientas.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/angularjs-vs-jquery.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						4.- <a href="../articulos/primeros-pasos-angularjs.html">Primeros pasos con AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué necesitas para trabajar con AngularJS, como descargar el framework y cómo realizar un primer programa, el típico Hola Mundo.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/primeros-pasos-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						5.- <a href="../articulos/binding-angularjs-doble-binding.html">Binding en AngularJS, y doble binding</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						El enlace de datos es una de las cosas que facilita la programación con AngularJS, en inglés Data binding, siendo que en Angular tenemos un doble binding.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/binding-angularjs-doble-binding.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Desarrollo declarativo con AngularJS</b></span> <p><b style="font-size: 1.2em; color: #999;">Comenzamos a introducirnos en el mundo de Angular con una serie de artículos básicos dedicados a lo que se conoce como el HTML declarativo, una de las características de esta librería, que nos permite realizar aplicaciones sencillas sin necesidad de Javascript. El proceso consiste en crear una serie de declaraciones en el propio lenguaje de marcación en las que se indica qué cometido tienen los elementos de la página dentro de nuestra aplicación web.</b></p>				<div class="col_1 mb">
+										<h3>
+						6.- <a href="../articulos/directivas-expresiones-angularjs.html">Directivas y expresiones en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Una primera aproximación a los componentes que forman parte de las aplicaciones básicas que podremos desarrollar con AngularJS, las directivas y las expresiones.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/directivas-expresiones-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						7.- <a href="../articulos/directivas-nginit-ngrepeat-ngclick-angularjs.html">Directivas ngInit, ngRepeat y ngClick</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Ejemplo AngularJS en el que vamos a poder explorar el desarrollo únicamente con código HTML y aprender las directivas ngInit, ngRepeat y ngClick.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/directivas-nginit-ngrepeat-ngclick-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						8.- <a href="../articulos/videotutoriales-angularjs-directivas-html-ejemplos-practicos.html">Videotutoriales AngularJS, solo con directivas en HTML</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Ejemplos prácticos de AngularJS en los que solo estamos realizando código HTML, con directivas embutidas en el código HTML.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/videotutoriales-angularjs-directivas-html-ejemplos-practicos.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Separando el código Javascript</b></span> <p><b style="font-size: 1.2em; color: #999;">Después de aprender el desarrollo declarativo, conocemos las prácticas habituales en AngularJS, que nos indican que cada código debe ir en su lugar adecuado. Conocemos primeramente los módulos y controladores que nos permitirán organizar nuestro código separando el Javascript del HTML.</b></p>				<div class="col_1 mb">
+										<h3>
+						9.- <a href="../articulos/modulo-objeto-module-angularjs.html">Módulo, objeto module en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué son los módulos en AngularJS como crear un objeto module en el framework y qué tipo de cosas se podrán hacer con ellos.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/modulo-objeto-module-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						10.- <a href="../articulos/controladores-controller-angularjs.html">Controladores, controller en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Comenzamos a entender los controladores. Conocemos lo que es un controller en AngularJS, para qué se usa y qué tipo de código deben tener, introducimos también el concepto de scope en Angular.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/controladores-controller-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						11.- <a href="../articulos/ejercicio-controladores-angularjs.html">Variantes para crear controladores en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Este artículo contiene varias aproximaciones a controladores creados en AngularJS con diferentes estilos de codificación que nos aportan diferentes posibilidades.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/ejercicio-controladores-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						12.- <a href="../articulos/segundo-ejercicio-controller-angularjs.html">Segundo ejercicio con controller en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Crearemos una aplicación sencilla con la intención de practicar con controller en AngularJS, inicializando datos en el Scope, creando manejadores de eventos, etc.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/segundo-ejercicio-controller-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Explorando directivas a fondo</b></span> <p><b style="font-size: 1.2em; color: #999;">Para trabajar con AngularJS necesitamos dominar una serie de directivas que se encuentran presentes en el núcleo del framework, además de apoyarnos en otras directivas creadas por la comunidad. Las directivas enriquecen nuestro HTML y nos permiten realizar operaciones útiles sobre la página. Ahora exploraremos algunas directivas fundamentales con mayor detalle.</b></p>				<div class="col_1 mb">
+										<h3>
+						13.- <a href="../articulos/directiva-ngclass-angularjs.html">Directiva ngClass en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicaciones de las alternativas posibles de uso de la directiva ngClass de AngularJS con ejemplos prácticos.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/directiva-ngclass-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						14.- <a href="../articulos/trabajando-campos-checkbox-angularjs.html">Trabajando con campos checkbox en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicaciones y prácticas con campos input checkbox con AngularJS, conociendo las directivas ngChecked, ngTrueValue, ngFalseValue, ngChecked.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/trabajando-campos-checkbox-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						15.- <a href="../articulos/filtrar-ordenar-variables-directiva-ngrepeat.html">Filtrar, ordenar y otras variables embutidas en la directiva ngRepeat</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Usos más detallados de la directiva ngRepeat para filtrar, ordenar los elementos y acceder a variables embutidas que nos dan información sobre las repeticiones.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/filtrar-ordenar-variables-directiva-ngrepeat.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Ajax en Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">Introducción a los mecanismos para realizar conexiones con el servidor asíncronas por HTTP con AngularJS. Lo que comúnmente conocemos por Ajax, con ejemplos que nos facilitarán entender una de las facetas más potentes de este frameweork Javascript y el desarrollo frontend basado en las cada vez más populares API REST.</b></p>				<div class="col_1 mb">
+										<h3>
+						16.- <a href="../articulos/ajax-angularjs-acceso-apirest.html">Ajax con AngularJS para acceso a API</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Nos introducimos en el uso de Ajax mediante AngularJS. Lo vamos a hacer de una manera muy habitual en el desarrollo con este framework que es accediendo a un servicio web que nos ofrece un API REST.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/ajax-angularjs-acceso-apirest.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						17.- <a href="../articulos/jsonp-angularjs-ejercicio-ajax-apirest.html">JSONP en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Ejercicio Ajax en el que realizamos un acceso a API REST que devuelve información mediante JSONP, realizado con el service $http de AngularJS.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/jsonp-angularjs-ejercicio-ajax-apirest.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						18.- <a href="../articulos/operacion-post-http-angularjs.html">Operación post HTTP con $http en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo realizar una operación POST con Ajax, para enviar datos al servidor por medio del HTTP con la librería AngularJS y el service $http.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/operacion-post-http-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						19.- <a href="../articulos/promise-estandar-ajax-angularjs.html">Promise estándar then() de $http en AngularJS 1.4</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicaciones sobre el nuevo estándar promise para llamadas Ajax en Angular 1.4, usando el método then().						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/promise-estandar-ajax-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Vistas y sistema de Routing en Angular</b></span> <p><b style="font-size: 1.2em; color: #999;">En resumen, las vistas nos permiten separar partes de nuestra interfaz en partes distintas y con el sistema de routing AngularJS es capaz de saber qué vistas debe mostrarte atendiendo a la URL que la aplicación esté mostrando. Veremos en detalle cómo trabajar con múltiples vistas y rutas profundas en una aplicación desarrollada con este framework Javascript.</b></p>				<div class="col_1 mb">
+										<h3>
+						20.- <a href="../articulos/ngroute-crear-rutas-intercambiar-vistas-angularjs.html">Módulo ngRoute para crear rutas e intercambiar vistas en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicaciones sobre ngRoute, el módulo de AngularJS que nos permite crear rutas profundas en nuestra aplicación e intercambiar vistas dependiendo de la ruta.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/ngroute-crear-rutas-intercambiar-vistas-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						21.- <a href="../articulos/introduccion-location-primeros-controladores-paralelo-angularjs.html">Introducción a $location y primeros controladores en paralelo</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Ejercicio donde tenemos en marcha dos controladores ejecutándose en paralelo en dos partes de la página, así como varias vistas. Conocemos también $location de AngularJS.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/introduccion-location-primeros-controladores-paralelo-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Otros artefactos en AngularJS</b></span> <p><b style="font-size: 1.2em; color: #999;">Vamos repasando otros recursos para la programación de aplicaciones en AngularJS, de diversa índole, como factorías, servicios y analizando en profundidad asuntos importantes como el scope.</b></p>				<div class="col_1 mb">
+										<h3>
+						22.- <a href="../articulos/factorias-factory-angularjs.html">Factorías (factory) en AngularJS</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Qué son las factorías de AngularJS, factory en la terminología Angular. Para qué sirven, qué rasgos las caracterizan y cómo crearlas.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/factorias-factory-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						23.- <a href="../articulos/scope-angular-sparent.html">Scope en Angular, manejando ámbitos con $parent</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Explicaciones más detalladas del omnipresente scope de AngularJS, nuestro ámbito. Introducimos el $parent para acceder al scope padre.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/scope-angular-sparent.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						24.- <a href="../articulos/ambito-scope-controladores-ap.html">Ámbito o scope en controladores anidados y paralelos</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Realizamos diversas variantes de construcción de aplicaciones en Angular con distintos controladores y repasamos las condiciones del scope en cada una.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/ambito-scope-controladores-ap.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						25.- <a href="../articulos/angular-material.html">Angular Material</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Este módulo para AngularJS nos permite implementar de una manera muy cómoda un diseño de aplicación con las directrices de Material Design de Google.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/angular-material.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+			<span class="col_1 h2"><b style="font-size: 1.2em;">Components en Angular 1.5</b></span> <p><b style="font-size: 1.2em; color: #999;">Tratamos el desarrollo basado en componentes de AngularJS, arquitecturas de aplicaciones con componentes personalizados. Cómo crear componentes, definir la lógica con los componentes, la interoperabildad para comunicación entre components, etc.</b></p>				<div class="col_1 mb">
+										<h3>
+						26.- <a href="../articulos/componentes-angularjs-15.html">Componentes en AngularJS 1.5</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Desarrollo de components en Angular 1.5, en esta guía a la componetización aprenderás a realizar realizar tus propios componentes.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/componentes-angularjs-15.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						27.- <a href="../articulos/controladores-components-angular.html">Controladores en components de Angular</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Los componentes en AngularJS mantienen la lógica en controladores independientes, que debemos definir durante la declaración component.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/controladores-components-angular.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+							<div class="col_1 mb">
+										<h3>
+						28.- <a href="../articulos/bindings-componentes-angularjs.html">Bindings entre componentes AngularJS 1.5</a>
+					</h3>
+					<div class="entradaArticle col_1">
+						Cómo compartir datos entre unos componentes y otros, a fin de facilitar la interoperabilidad, por medio de mecanismos de binding, en AngularJS 1.5.						<div class="seguirLeyendo fr">
+							<a class="button" href="../articulos/bindings-componentes-angularjs.html">Entrar</a>
+						</div>
+					</div>
+				</div>
+								<a name="descargas"></a>
+					<h2 class="cabeceraAzul"><b>Descargas</b></h2>
+					<div class="col_1 mb">
+						Este manual puedes descargarlo en formato amigable para impresión y lectura en dispositivos a través de la <a href="https://app.desarrolloweb.com">App de DesarrolloWeb.com</a>.
+					</div>
+								
+				
+			<p style="clear: both;">
+
+
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- dw_adaptable_piemanuales -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2899450519669111"
+     data-ad-slot="4067551616"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			</p>
+			<div class="col_1">
+				<a name="compartir"></a>
+				<h2 class="cabeceraAzul"><b>Compartir</b></h2>
+								<div class="col_1 mt">
+
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+	  {lang: 'es'}
+	</script>
+
+	
+	<div class="col_1">
+		<ul class="col_1 inline_list redes_sociales">
+			<li>
+				<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					lang: es_ES
+				</script>
+				<script type="IN/Share" data-counter="top"></script>
+			</li>
+			<li>
+				<g:plusone size="tall"></g:plusone>
+			</li>
+			<li>
+				<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+				<div>
+			    <a href="//twitter.com/share" class="twitter-share-button"
+			       data-url="http://www.desarrolloweb.com/manuales/manual-angularjs.html"
+			       data-counturl="http://www.desarrolloweb.com/manuales/manual-angularjs.html"
+			       data-count="vertical">Tweet</a>
+				</div>
+			</li>
+			<li>
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=459742597430134";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like" data-href="http://www.desarrolloweb.com/manuales/manual-angularjs.html" data-width="150" data-layout="box_count" data-action="recommend" data-show-faces="false" data-send="false"></div>
+			</li>
+		</ul>
+		<div class="col_1">
+					</div>
+	</div>
+
+</div> <!-- col_1 -->			</div>
+
+			<div class="col_1" id="comentarios"><div class="col_1 mt">
+	<p class="cabeceraAzul">
+		<a name="comentarios"></a><b>Comentarios</b>
+	</p>
+
+	<div>
+				<div class="accion">
+			<div class="accion icocoment">
+						</div>
+			<div class="accion addcommentsico">
+				<span class="icon-chat"></span>
+				<a href="/comentarios/anadir.php?manual=186">Enviar un comentario  al manual</a>
+			</div>
+					</div>
+	</div>
+				<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">YamidVallejo</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario7771" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					18/12/2014				</div>
+								<b>Agradecimiento</b>
+				<br>
+								<div>
+					Solo para agradecerles por el manual de AngularJS y por tenernos al tanto de estas interesantes herramientas que enriquecen nuestro bagaje en cuanto al desarrollo web.<br />
+<br />
+Hasta Luego.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62204"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62204, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">walter_guaymas</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario4257" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					22/1/2015				</div>
+								<b>Gracias por compartir</b>
+				<br>
+								<div>
+					Buenisimo el manual, muy completo y muy didactico. Muchas gracias				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62382"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62382, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">proimond</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario4311" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					04/2/2015				</div>
+								<b>Está finalizado?</b>
+				<br>
+								<div>
+					Buenas muchachos<br />
+<br />
+Hace un buen tiempo me baje el manual y resulta que ya van como 10 capítulos mas. Queria saber si ya esta es la última versión o van a sacar alguna mas				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62464"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62464, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Davinia</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					19/2/2015				</div>
+								<b>Buen manual</b>
+				<br>
+								<div>
+					Buen manual, muy bien explicado todo y muy didáctivo.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62581"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62581, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">davidcm86</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><a href="/usuarios/davidcm86.html" style="text-decoration: none;"><img  class="cargatipusuario"  id="tipusuario2342" border="0" src="/comunidad/fotos/881602112740.gif" width=70 height=55 vspace=2></a>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					01/3/2015				</div>
+								<b>Posible fallo</b>
+				<br>
+								<div>
+					Buenas, he observado que no se puede buscar por cada cerveza, pero la opción si que está. Ya digo que por lo menos a mí no me funciona, pero sí lo hace con estos cambios:<br />
+Al hacer la llamada al método vm.buscaCervezas, le pasamos vm.nombre, de tal manera: vm.buscaCervezas(vm.nombre);<br />
+Y el método del js quedaría tal que así:<br />
+function controladorPrincipal($scope, $http){<br />
+	var vm = this;<br />
+vm.orden = false;<br />
+	vm.campo = &quot;name&quot;;<br />
+	var url = &quot;http://api.openbeerdatabase.com/v1/beers.json?callback=JSON_CALLBACK&quot;;<br />
+<br />
+	vm.buscaCervezas = function(nombre){<br />
+		url += &quot;&amp;query=&quot; + nombre;<br />
+		if(nombre){ // al rellenarlo gracias al binding ya tenemos los datos<br />
+			console.log(nombre);<br />
+			url += &quot;&amp;query=&quot; + nombre;<br />
+		}<br />
+		$http.jsonp(url).success(function(respuesta){<br />
+			console.log(&quot;res:&quot;, respuesta);<br />
+			vm.cervezas = respuesta.beers;<br />
+		});<br />
+	}<br />
+}				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62649"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62649, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">juan_c</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario8479" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					06/3/2015				</div>
+								<b>Más Capítulos?</b>
+				<br>
+								<div>
+					Hola, ¿cuándo seguiréis con más capítulos del manual?<br />
+Gracias				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62687"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62687, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Pablo</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					11/3/2015				</div>
+								<b>Especialización de AngularJS:</b>
+				<br>
+								<div>
+					Los invito a que conozcan a Coderhouse.com. Somos una escuela de programación enfocados en cursos prácticos y presenciales. Para mayor información sobre nuestra especialización de AngularJS: http://www.coderhouse.com/curso-de-angularjs. <br />
+<br />
+Saludos!<br />
+Co-fundador de Coderhouse				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62719"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62719, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">HoracioMoreno</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><a href="/usuarios/HoracioMoreno.html" style="text-decoration: none;"><img  class="cargatipusuario"  id="tipusuario9905" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2></a>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					13/3/2015				</div>
+								<b>Gracias</b>
+				<br>
+								<div>
+					Gracias realmente por hacer estos aportes a la comunidad los sigo desde siempre <br />
+<br />
+Saludos!				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62729"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62729, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">d0hk0</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario4274" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					29/3/2015				</div>
+								<b>genial</b>
+				<br>
+								<div>
+					muy bueno, aprendí rápidamente, ojala los ejemplos pudieran descargarse para no tener que estar copiando y pegando.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario62849"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(62849, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Pablo Castillo</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					21/8/2015				</div>
+								<b>Ejemplos muy buenos.</b>
+				<br>
+								<div>
+					Muchas gracias por disponer este tutorial. Los ejemplos son muy buenos.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario63840"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(63840, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Raúl M</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					26/8/2015				</div>
+								<b>Excelente manual</b>
+				<br>
+								<div>
+					Felicitaciones, un manual muy entendible a todos los niveles. El único problema es que la extensión de chrome para AngularJS aparentemente dejó de funcionar. De ahí en adelante es una muy buena guía para poder inciar con los desarrollos en AngularJS				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario63878"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(63878, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">Daniel_isaac</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><a href="/usuarios/Daniel_isaac.html" style="text-decoration: none;"><img  class="cargatipusuario"  id="tipusuario6786" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2></a>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					06/9/2015				</div>
+								<b>Mas conocimientos!!</b>
+				<br>
+								<div>
+					Gracias ya lo eh descargado ahora a practicar aprender :D				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario63938"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(63938, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Omar</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					29/12/2015				</div>
+								<b>Felicitaciones</b>
+				<br>
+								<div>
+					Excelente manual para quienes estamos iniciando en Angularjs. He consultado diferente información en la web y éste manual en español me parece que explica de una manera ligera pero destacando los puntos mas importantes respecto a este framework.<br />
+<br />
+Saludos y gracias por compartir el conocimiento.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario64722"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(64722, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Sebastian</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					26/2/2016				</div>
+								<b>Muy buen material</b>
+				<br>
+								<div>
+					Realmente es difícil encontrar circulando material gratuito en español de la calidad de éste. Es muy completo y a su vez se encuentra bastante actualizado. Te das cuenta sobre todo en la parte de controladores, en la mayoría de los casos sólo dan el ejemplo pasando el scope como parámetro con $scope y no el modo &quot;controller as&quot; que es el que se utiliza actualmente.<br />
+Me saco el sombrero, sigan así. <br />
+Muchas gracias.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario65166"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(65166, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Ermiro</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					17/5/2016				</div>
+								<b>Manual de Angularjs</b>
+				<br>
+								<div>
+					felicidades equipo.<br />
+Desde hace año ustedes demuestran la solidaridad del conocimiento <br />
+Exitos<br />
+El manual muy bueno!&quot;!!!				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario65789"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(65789, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">juancontrerasarteaga</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario4922" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					06/6/2016				</div>
+								<b>Manual de Angular</b>
+				<br>
+								<div>
+					Excelente manual				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario65964"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(65964, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">p3quod</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario5939" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					02/8/2016				</div>
+								<b>Manual AngularJS</b>
+				<br>
+								<div>
+					Buen trabajo, magnífico manual.<br />
+<br />
+Muchas gracias !				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66423"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66423, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">p3quod</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario1168" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					03/8/2016				</div>
+								<b>Ejemplo no funciona</b>
+				<br>
+								<div>
+					Hola,<br />
+<br />
+Estoy haciendo el tutorial, muy bueno, enhorabuena !<br />
+<br />
+Para cuando tengas que actualizarlo, el ejemplo del punto 4.3. accede a una URL que ya no está accesible				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66431"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66431, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p><span style="line-height: 55px; height: 55px;">Danihelp</span><div align="center" class="fuente8" style="float: left; margin: 0px 10px 0px 0px;"><img  class="cargatipusuario"  id="tipusuario7713" border="0" src="/comunidad/fotos/foto_defecto.gif" width=70 height=55 vspace=2>	</div></p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					11/10/2016				</div>
+								<b>Excelente Manual</b>
+				<br>
+								<div>
+					Exelente aporte, soy nuevo con Angular y este manual es lo que necesitaba.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66955"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66955, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>sobrix</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					13/10/2016				</div>
+								<b>Muy buen tutorial</b>
+				<br>
+								<div>
+					Quiero felicitaros por el manual. AngularJS está muy bien explicado y los ejemplos me han ayudado mucho.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario66981"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(66981, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>guli</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					06/11/2016				</div>
+								<b>Agredecimiento</b>
+				<br>
+								<div>
+					Muy claro el manual, me costaba mucho entender este frameworks , pero gracias a ustedes se me hizo sencillo				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario67196"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(67196, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Rul</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					26/3/2017				</div>
+								<b>Bravo</b>
+				<br>
+								<div>
+					Muchas gracias, excelente manual.				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario68363"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(68363, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>zebaz</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					29/6/2017				</div>
+								<b>Conexion a base de datos</b>
+				<br>
+								<div>
+					Algun tutorial de angular para conectar base de datos?				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario69311"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(69311, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Eagle heart</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					02/7/2017				</div>
+								<b>Enhorabuena</b>
+				<br>
+								<div>
+					Una joya de manual, ¡muchas gracias por compartirlo! Por fin entiendo muchos conceptos sobre el funcionamiento de AngularJS que no suelen explicar a fondo en otros cursos				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario69351"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(69351, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>dimitri</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					07/7/2017				</div>
+								<b>codificacion para texto</b>
+				<br>
+								<div>
+					var. text= angular.module(&quot;text&quot;,[]);<br />
+<br />
+text.contoller(&quot;mensaje&quot;,function($scope){<br />
+	$scope.saludo =&quot;&quot;<br />
+})				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario69424"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(69424, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+					<div>
+				<div class="nombre_coment">
+					<p>Fran</p>
+				</div>
+			</div>
+						<div class="nofloat"></div>
+			<div class="cajacomentario" >
+				<div class="fr tar cajaatributos">
+					19/12/2018				</div>
+								<b>Genial</b>
+				<br>
+								<div>
+					Muchas gracias! me ha gustado mucho y ahora seguiré con el de Angular2. un saludo				</div>
+				<div class="col_1 mb mt">
+					<div id="spamcomentario71627"><a title="Marcar como spam" href="javascript:void(0)" onclick="return marcarSpam(71627, 'comentario')" style="color: rgb(102, 102, 255);">Marcar como spam</a></div>
+				</div>
+			</div>
+		
+		<div class="accion">
+			<div class="accion icocoment">
+						</div>
+			<div class="accion addcommentsico">
+				<span class="icon-chat"></span>
+				<a href="/comentarios/anadir.php?manual=186">Enviar un comentario  al manual</a>
+			</div>
+					</div>
+	</div></div>			</div>
+		</div>
+	</article>
+</section>
+
+		</div>
+      <!-- fin columna principal -->
+
+      <!-- Barra lateral -->
+      <aside>
+
+                <div id="usuarios">
+          <div class="icousuario">
+            <span class="icon-user"></span>
+            <span>Usuarios:</span> <a id="enlacelogin" href="#" onclick="$('.cu250mdWrapper').slideToggle();return false;">Login</a> | <a href="/comunidad/registro/">Registro</a>
+            <div class="cu250mdWrapper" id="flogin">
+              <div class="cu250md">
+                <div class="accesoUsuarios">Acceso usuarios</div>
+                <div class="errorLoginWrapper">
+                  <div class="errorLogin"></div>
+                </div>
+                <form method="post" action="/dologin.php" id="formullogin" onsubmit="return false;">
+                  <input type="hidden" value="" name="id_descarga">
+                  <input type="hidden" value="/" name="origen">
+                  <div>
+                    <label class="fuente8" for="usuario2">E-mail:</label>
+                    <input type="text" maxlength="150" size="14" name="usuario" id="usuario2">
+                  </div>
+                  <div>
+                    <label class="fuente8" for="clave2">Clave:</label>
+                    <input type="password" maxlength="150" size="14" name="clave" id="clave2" >
+                  </div>
+                  <div>
+                    <label class="fuente8" for="guardar_clave2">Recordar este usuario</label>
+                    <input type="checkbox" value="1" name="guardar_clave" id="guardar_clave2">
+                  </div>
+
+                  <div class="submitButtonWrapper">
+                    <input type="submit" value="Login" id="btnlogin" onclick="doSubmit(this)">
+                  </div>
+                </form>
+                <div class="accion">
+                  <div class="clearfix">
+                    <a href="/comunidad/recordarclave.php"><img src="/images/iconos/key.png" width="16" height="16" alt=""> ¿Olvidaste tu clave?</a>
+                  </div>
+                  <div class="clearfix">
+                    <a href="/comunidad/registro/"><img src="/images/iconos/user.png" width="16" height="16" alt=""> Registrarse</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div id="bannerslat">
+
+        
+        </div>
+        <div class="col_1 tac">
+          
+        </div>
+      </aside>
+      <!-- Fin de Barra lateral -->
+      <div class="clearfix"></div>
+    </div>
+    <!-- fin div role main -->
+  </div>
+    <!-- fin div supercuerpo -->
+
+
+    <!-- PIE DE P?GINA -->
+    <footer id="pieprincipal">
+      <div id="todopie">
+        <div class="seccionpie">
+          <div class="seccionpieh1">Principales</div>
+          <ul>
+            <li><a href="/manuales/">Manuales</a></li>
+            <li><a href="/faq/">FAQs</a></li>
+            <li><a href="/en-directo/">En directo</a></li>
+            <li><a href="/videos/">Vídeos</a></li>
+          </ul>
+        </div>
+        <div class="seccionpie">
+          <div class="seccionpieh1">Monotemáticos</div>
+          <ul>
+            <li><a href="/desde0/">Desde cero</a></li>
+            <li><a href="/html/">HTML</a>, <a href="/css/">CSS</a></li>
+            <li><a href="/javascript/">Javascript</a>, <a href="/ajax/">Ajax</a></li>
+            <li><a href="/diseno-web/">Diseño</a>, <a href="/asp/">ASP</a></li>
+          </ul>
+        </div>
+        <div class="seccionpie" id="encuentranos">
+          <div class="fb">
+            <a href="https://www.facebook.com/desarrollowebcom" rel="nofollow" class="enrs" target="_blank">
+              <span class="icon-facebook2"></span>
+            </a>
+          </div>
+          <div class="twitter"><a href="http://twitter.com/deswebcom" rel="nofollow" class="enrs" target="_blank"><span class="icon-twitter2"></span></a></div>
+          <div class="youtube">
+            <a href="http://www.youtube.com/user/desarrollowebcom" rel="nofollow" class="enrs" target="_blank">
+              <span class="icon-youtube2"></span>
+            </a>
+          </div>
+          <div class="googleplus">
+            <a href="https://plus.google.com/+desarrolloweb" rel="nofollow" class="enrs" target="_blank"><span class="icon-google-plus2"></span></a>
+          </div>
+
+        </div>
+       
+      </div> <!-- todo pie -->
+      <div class="clearfix"></div>
+      <div id="piefin">
+        <ul>
+          <li><a href="/">Desarrolloweb.com</a></li>
+          <li><a href="/copyright/" rel="nofollow">Copyright</a></li>
+          <li><a href="/anunciese/" rel="nofollow">Publicidad</a></li>
+          <li><a href="/acercade/">Acerca de</a></li>
+          <li><a href="/datos-legales/" rel="nofollow">Datos legales</a></li>
+          <li><a href="/datos-legales/cookies.php" rel="nofollow">P. de cookies</a></li>
+          <li><a href="/contacta/" rel="nofollow">Contacta</a></li>
+        </ul>
+      </div>
+
+    </footer>
+    <!-- FIN PIE DE PAGINA -->
+  </div>
+  <!-- fin container -->
+
+  <script src="https://cookie.consent.is/cc/afd831ed.js"></script>
+  <script src="/js/min/script-min.js"></script>
+
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-365134-1"></script>
+  <script>
+  var gtagId = 'UA-365134-1';
+  // Disable tracking by default
+  window['ga-disable-' + gtagId] = true;
+
+  // Initialize gtag
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  </script>
+  
+
+</body>
+</html>
